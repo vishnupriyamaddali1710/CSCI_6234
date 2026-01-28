@@ -1,0 +1,10 @@
+@startuml
+object User
+object ApplicationController
+object JobApplication
+object FileStorage
+
+User -> ApplicationController : addApplication()
+ApplicationController -> JobApplication : create()
+ApplicationController -> FileStorage : save()
+@enduml

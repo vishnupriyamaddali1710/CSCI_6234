@@ -1,0 +1,12 @@
+@startuml
+start
+:Enter job details;
+:Validate input;
+if (Valid?) then (Yes)
+  :Save application;
+  :Confirm success;
+else (No)
+  :Show error message;
+endif
+stop
+@enduml

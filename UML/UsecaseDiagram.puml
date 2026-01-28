@@ -1,0 +1,12 @@
+@startuml
+left to right direction
+actor User
+
+rectangle "Job Application Tracker" {
+  User --> (Add Job Application)
+  User --> (Update Application Status)
+  User --> (View Applications)
+  User --> (Delete Application)
+  User --> (Search Applications)
+}
+@enduml

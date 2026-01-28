@@ -1,0 +1,10 @@
+@startuml
+[*] --> Applied
+Applied --> Interviewing
+Interviewing --> Offered
+Interviewing --> Rejected
+Offered --> Accepted
+Offered --> Rejected
+Accepted --> [*]
+Rejected --> [*]
+@enduml

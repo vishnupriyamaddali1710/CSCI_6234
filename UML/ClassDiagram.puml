@@ -1,0 +1,25 @@
+@startuml
+class JobApplication {
+  -string company
+  -string role
+  -string status
+  -string dateApplied
+  +getDetails()
+  +updateStatus()
+}
+
+class ApplicationManager {
+  -vector<JobApplication> applications
+  +addApplication()
+  +removeApplication()
+  +searchApplication()
+}
+
+class FileStorage {
+  +saveToFile()
+  +loadFromFile()
+}
+
+ApplicationManager "1" *-- "many" JobApplication
+ApplicationManager --> FileStorage
+@enduml

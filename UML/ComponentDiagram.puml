@@ -1,0 +1,8 @@
+@startuml
+component "User Interface" as UI
+component "Application Logic" as Logic
+component "File Storage" as Storage
+
+UI --> Logic
+Logic --> Storage
+@enduml
