@@ -1,0 +1,67 @@
+@startuml
+left to right direction
+
+actor "Job Seeker" as User
+actor "File System" as FS
+
+rectangle "Job Application Tracker" {
+
+  usecase "Add Job Application" as UC1
+  usecase "Update Application Status" as UC2
+  usecase "View Applications" as UC3
+  usecase "Delete Application" as UC4
+  usecase "Search Applications" as UC5
+
+  User --> UC1
+  User --> UC2
+  User --> UC3
+  User --> UC4
+  User --> UC5
+
+  UC1 --> FS
+  UC2 --> FS
+  UC3 --> FS
+  UC4 --> FS
+  UC5 --> FS
+}
+
+note right of User
+The Job Seeker is the primary actor who interacts with the Job
+Application Tracker to manage personal job applications. The user
+adds, updates, views, searches, and deletes applications while
+tracking the job search process.
+end note
+
+note right of FS
+The File System is a secondary actor that provides persistent
+storage for job application data. It supports saving and retrieving
+information used by the system.
+end note
+
+note bottom of UC1
+This use case allows the user to enter job details such as company
+name, job title, and application date. The system validates and
+stores the information.
+end note
+
+note bottom of UC2
+This use case enables the user to update the current status of a job
+application, such as Applied, Interviewing, Offered, or Rejected.
+end note
+
+note bottom of UC3
+This use case allows the user to view all job applications and their
+associated details in the system.
+end note
+
+note bottom of UC4
+This use case allows the user to remove a job application that is no
+longer relevant from the tracker.
+end note
+
+note bottom of UC5
+This use case enables the user to search job applications using
+criteria such as company name or status.
+end note
+
+@enduml
