@@ -1,0 +1,12 @@
+@startuml
+actor User
+
+boundary "Job Form" as UI
+control "ApplicationController" as C
+entity "JobApplication" as E
+
+User --> UI
+UI --> C : submit job details
+C --> E : create()
+C --> UI : confirmation
+@enduml

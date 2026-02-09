@@ -1,0 +1,12 @@
+@startuml
+actor User
+
+boundary "Search Screen" as UI
+control "ApplicationController" as C
+entity "JobApplication" as E
+
+User --> UI
+UI --> C : search criteria
+C --> E : query()
+C --> UI : show results
+@enduml

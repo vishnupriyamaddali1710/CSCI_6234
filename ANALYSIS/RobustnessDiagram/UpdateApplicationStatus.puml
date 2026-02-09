@@ -1,0 +1,12 @@
+@startuml
+actor User
+
+boundary "Status Screen" as UI
+control "ApplicationController" as C
+entity "JobApplication" as E
+
+User --> UI
+UI --> C : update status
+C --> E : modify()
+C --> UI : success message
+@enduml

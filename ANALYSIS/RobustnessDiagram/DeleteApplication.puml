@@ -1,0 +1,12 @@
+@startuml
+actor User
+
+boundary "Delete Screen" as UI
+control "ApplicationController" as C
+entity "JobApplication" as E
+
+User --> UI
+UI --> C : delete request
+C --> E : remove()
+C --> UI : confirmation
+@enduml

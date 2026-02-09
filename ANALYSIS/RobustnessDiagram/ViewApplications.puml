@@ -1,0 +1,12 @@
+@startuml
+actor User
+
+boundary "Application List" as UI
+control "ApplicationController" as C
+entity "JobApplication" as E
+
+User --> UI
+UI --> C : request list
+C --> E : fetch()
+C --> UI : display list
+@enduml
