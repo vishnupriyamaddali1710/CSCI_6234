@@ -1,0 +1,36 @@
+@startuml
+
+class User {
+  userId : int
+  name : string
+  email : string
+}
+
+class JobApplication {
+  applicationId : int
+  dateApplied : string
+}
+
+class Company {
+  companyId : int
+  companyName : string
+  location : string
+}
+
+class Position {
+  positionId : int
+  title : string
+}
+
+class ApplicationStatus {
+  statusId : int
+  statusName : string
+}
+
+User "1" -- "0..*" JobApplication : submits
+
+JobApplication "1" -- "1" Company : appliedTo
+JobApplication "1" -- "1" Position : for
+JobApplication "1" -- "1" ApplicationStatus : has
+
+@enduml
