@@ -1,0 +1,20 @@
+@startuml
+start
+
+:Request Application List;
+note right
+User requests to view all job applications.
+end note
+
+:Retrieve Applications;
+note right
+System retrieves stored applications.
+end note
+
+:Display Applications;
+note right
+Applications are displayed to the user.
+end note
+
+stop
+@enduml

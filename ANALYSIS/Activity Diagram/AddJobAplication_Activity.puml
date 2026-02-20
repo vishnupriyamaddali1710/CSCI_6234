@@ -1,0 +1,35 @@
+@startuml
+start
+
+:Open Job Form;
+note right
+User opens the job application form.
+end note
+
+:Enter Job Details;
+note right
+User enters company, position, and application date.
+end note
+
+:Submit Application;
+note right
+User submits the completed job form.
+end note
+
+:Validate Data;
+note right
+System validates the entered job information.
+end note
+
+:Save Job Application;
+note right
+System stores the job application.
+end note
+
+:Show Confirmation;
+note right
+System displays confirmation to the user.
+end note
+
+stop
+@enduml

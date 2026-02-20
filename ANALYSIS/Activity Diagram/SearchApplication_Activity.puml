@@ -1,0 +1,25 @@
+@startuml
+start
+
+:Enter Search Criteria;
+note right
+User enters keywords or status to search.
+end note
+
+:Submit Search;
+note right
+User submits search request.
+end note
+
+:Query Applications;
+note right
+System searches matching job applications.
+end note
+
+:Display Results;
+note right
+Search results are shown to the user.
+end note
+
+stop
+@enduml

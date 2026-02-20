@@ -1,0 +1,30 @@
+@startuml
+start
+
+:Select Application;
+note right
+User selects an existing job application.
+end note
+
+:Choose New Status;
+note right
+User chooses a new status such as Interviewing or Rejected.
+end note
+
+:Update Status;
+note right
+System updates the application status.
+end note
+
+:Save Changes;
+note right
+Updated status is saved.
+end note
+
+:Show Update Confirmation;
+note right
+System shows confirmation of the update.
+end note
+
+stop
+@enduml

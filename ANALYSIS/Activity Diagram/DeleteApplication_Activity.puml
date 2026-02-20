@@ -1,0 +1,32 @@
+@startuml
+start
+
+:Select Application;
+note right
+User selects the application to delete.
+end note
+
+:Request Delete;
+note right
+User requests deletion of the application.
+end note
+
+if (Confirm?) then (Yes)
+  :Delete Application;
+  note right
+  System deletes the selected application.
+  end note
+
+  :Show Delete Confirmation;
+  note right
+  System confirms deletion to the user.
+  end note
+else (No)
+  :Cancel Operation;
+  note right
+  Deletion is canceled.
+  end note
+endif
+
+stop
+@enduml
